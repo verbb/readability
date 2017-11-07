@@ -57,7 +57,7 @@ If it's scored as easy to read, then the words per minute goes up in the calcula
 
 `How long will it take to read?  {{ someContent | humanReadingTime }}`
 
-If this is too complicated for you or you just want a simple average reading time, I made a new function to do simple math based off an [average of 250 words per minute](http://www.healthguidance.org/entry/13263/1/What-Is-the-Average-Reading-Speed-and-the-Best-Rate-of-Reading.html).
+If you just want a simple average reading time, I made a new function to do simple math based off an [average of 250 words per minute](http://www.healthguidance.org/entry/13263/1/What-Is-the-Average-Reading-Speed-and-the-Best-Rate-of-Reading.html).
 
 `How long will it take to read?  {{ someContent | humanAverageReadingTime }}`
 
@@ -70,8 +70,11 @@ If this is too complicated for you or you just want a simple average reading tim
 #### Character, Letter, Sentence, Word Counts
 
 `{{ someContent | characterCount }}`
+
 `{{ someContent | letterCount }}`
+
 `{{ someContent | wordCount }}`
+
 `{{ someContent | sentenceCount }}`
 
 ## Readability Roadmap
