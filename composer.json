@@ -1,0 +1,51 @@
+{
+    "name": "mikestecker/craft3-readability",
+    "description": "Get statistics on your text.",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "readability"
+    ],
+    "support": {
+        "docs": "https://github.com/mikestecker/craft3-readability/blob/master/README.md",
+        "issues": "https://github.com/mikestecker/craft3-readability/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mike Stecker",
+            "homepage": "https://github.com/mikestecker"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "~3.0.0-beta.23",
+        "davechild/textstatistics": "^1.0"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+          "mikestecker\\readability\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Readability",
+        "handle": "readability",
+        "schemaVersion": "1.0.0",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/mikestecker/craft3-readability/master/CHANGELOG.md",
+        "components": {
+            "readability": "mikestecker\\readability\\services\\ReadabilityService"
+        },
+        "class": "mikestecker\\readability\\Readability"
+    }
+}
