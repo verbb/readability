@@ -2,7 +2,7 @@
     "name": "mikestecker/craft3-readability",
     "description": "Get statistics on your text.",
     "type": "craft-plugin",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "keywords": [
         "craft",
         "cms",
