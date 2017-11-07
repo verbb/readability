@@ -57,7 +57,9 @@ class ReadabilityTwigExtension extends \Twig_Extension
             new \Twig_SimpleFilter('daleChallReadabilityScore', [$this, 'daleChallReadabilityScore']),
             new \Twig_SimpleFilter('spacheReadabilityScore', [$this, 'spacheReadabilityScore']),
             new \Twig_SimpleFilter('wordCount', [$this, 'wordCount']),
+            new \Twig_SimpleFilter('readingTime', [$this, 'readingTime']),
             new \Twig_SimpleFilter('humanReadingTime', [$this, 'humanReadingTime']),
+            new \Twig_SimpleFilter('averageReadingTime', [$this, 'averageReadingTime']),
             new \Twig_SimpleFilter('humanAverageReadingTime', [$this, 'humanAverageReadingTime']),
         ];
     }
@@ -87,7 +89,9 @@ class ReadabilityTwigExtension extends \Twig_Extension
             new \Twig_SimpleFunction('daleChallReadabilityScore', [$this, 'daleChallReadabilityScore']),
             new \Twig_SimpleFunction('spacheReadabilityScore', [$this, 'spacheReadabilityScore']),
             new \Twig_SimpleFunction('wordCount', [$this, 'wordCount']),
+            new \Twig_SimpleFunction('readingTime', [$this, 'readingTime']),
             new \Twig_SimpleFunction('humanReadingTime', [$this, 'humanReadingTime']),
+            new \Twig_SimpleFunction('averageReadingTime', [$this, 'averageReadingTime']),
             new \Twig_SimpleFunction('humanAverageReadingTime', [$this, 'humanAverageReadingTime']),
         ];
     }
@@ -212,9 +216,29 @@ class ReadabilityTwigExtension extends \Twig_Extension
      *
      * @return string
      */
+    public function readingTime($content)
+    {
+        return Template::raw(Readability::$plugin->readability->readingTime($content));
+    }
+
+    /**
+     * @param $content
+     *
+     * @return string
+     */
     public function humanReadingTime($content)
     {
         return Template::raw(Readability::$plugin->readability->humanReadingTime($content));
+    }
+
+    /**
+     * @param $content
+     *
+     * @return string
+     */
+    public function averageReadingTime($content)
+    {
+        return Template::raw(Readability::$plugin->readability->averageReadingTime($content));
     }
 
     /**

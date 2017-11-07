@@ -302,7 +302,7 @@ class ReadabilityService extends Component
     /*
      * @return string
      */
-    public function humanReadingTime($content)
+    public function readingTime($content): int
     {
         if (empty($content)) {
             return '';
@@ -336,13 +336,27 @@ class ReadabilityService extends Component
         $min = ($word_count / $readingRate);
         $seconds = floor($min * 60);
         
+        return $seconds;
+    }
+
+    /*
+     * @return string
+     */
+    public function humanReadingTime($content)
+    {
+        if (empty($content)) {
+            return '';
+        }
+        $content = StringHelper::stripHtml($content);
+        $seconds = $this->readingTime($content);
+
         return Craft::$app->formatter->asDuration($seconds);
     }
 
     /*
      * @return string
      */
-    public function humanAverageReadingTime($content)
+    public function averageReadingTime($content): int
     {
         if (empty($content)) {
             return '';
@@ -357,6 +371,20 @@ class ReadabilityService extends Component
 
         $min = ($word_count / $readingRate);
         $seconds = floor($min * 60);
+
+        return $seconds;
+    }
+
+    /*
+     * @return string
+     */
+    public function humanAverageReadingTime($content)
+    {
+        if (empty($content)) {
+            return '';
+        }
+        $content = StringHelper::stripHtml($content);
+        $seconds = $this->averageReadingTime($content);
 
         return Craft::$app->formatter->asDuration($seconds);
     }
