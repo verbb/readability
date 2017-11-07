@@ -54,6 +54,8 @@ class ReadabilityTwigExtension extends \Twig_Extension
             new \Twig_SimpleFilter('colemanLiauIndex', [$this, 'colemanLiauIndex']),
             new \Twig_SimpleFilter('smogIndex', [$this, 'smogIndex']),
             new \Twig_SimpleFilter('automatedReadabilityIndex', [$this, 'automatedReadabilityIndex']),
+            new \Twig_SimpleFilter('daleChallReadabilityScore', [$this, 'daleChallReadabilityScore']),
+            new \Twig_SimpleFilter('spacheReadabilityScore', [$this, 'spacheReadabilityScore']),
             new \Twig_SimpleFilter('wordCount', [$this, 'wordCount']),
             new \Twig_SimpleFilter('humanReadingTime', [$this, 'humanReadingTime']),
             new \Twig_SimpleFilter('humanAverageReadingTime', [$this, 'humanAverageReadingTime']),
@@ -82,6 +84,8 @@ class ReadabilityTwigExtension extends \Twig_Extension
             new \Twig_SimpleFunction('colemanLiauIndex', [$this, 'colemanLiauIndex']),
             new \Twig_SimpleFunction('smogIndex', [$this, 'smogIndex']),
             new \Twig_SimpleFunction('automatedReadabilityIndex', [$this, 'automatedReadabilityIndex']),
+            new \Twig_SimpleFunction('daleChallReadabilityScore', [$this, 'daleChallReadabilityScore']),
+            new \Twig_SimpleFunction('spacheReadabilityScore', [$this, 'spacheReadabilityScore']),
             new \Twig_SimpleFunction('wordCount', [$this, 'wordCount']),
             new \Twig_SimpleFunction('humanReadingTime', [$this, 'humanReadingTime']),
             new \Twig_SimpleFunction('humanAverageReadingTime', [$this, 'humanAverageReadingTime']),
@@ -184,7 +188,20 @@ class ReadabilityTwigExtension extends \Twig_Extension
     {
         return Template::raw(Readability::$plugin->readability->automatedReadabilityIndex($content));
     }
-    
+
+
+    public function daleChallReadabilityScore($content)
+    {
+        return Template::raw(Readability::$plugin->readability->daleChallReadabilityScore($content));
+    }
+
+
+    public function spacheReadabilityScore($content)
+    {
+        return Template::raw(Readability::$plugin->readability->spacheReadabilityScore($content));
+    }
+
+
     public function wordCount($content)
     {
         return Template::raw(Readability::$plugin->readability->wordCount($content));

@@ -15,6 +15,8 @@ It allows you to measure the readability of text using common scoring systems, i
 
 You can learn more about these [here](https://raventools.com/blog/ultimate-list-of-online-content-readability-tests/).
 
+This plugin is based off the [Text Statistics](https://github.com/DaveChild/Text-Statistics) library.
+
 ![Screenshot](resources/img/plugin-logo.png)
 
 ## Requirements
@@ -83,6 +85,18 @@ The Automated Readability Index (ARI) mathematical formula has two variables: ch
 
 `Automated Readability Index:  {{ someContent | automatedReadabilityIndex }}`
 
+#### Dale-Chall Readability Score
+
+The Dale-Chall formula is a vocabulary-based readability formula, matching its own list of words to the words in the material being evaluated, to determine the appropriate grade level. In addition, the Dale-Chall formula factors in the total number of words and sentences, arriving at an average sentence length.
+
+`Dale-Chall Readability Score:  {{ someContent | daleChallReadabilityScore }}`
+
+#### Spache Readability Score
+
+The formula calculates the grade level of a text sample based on sentence length and number of unfamiliar words. The Spache Formula considers “unfamiliar words” as words that 3rd grade and below do not recognize. The Spache Formula is best used to calculate the difficulty of text that falls at the 3rd grade level or below.
+
+`Spache Readability Score:  {{ someContent | spacheReadabilityScore }}`
+
 ### Measuring How Long It Should Take To Read
 
 Measuring how long it takes to read is based off the Flesch-Kincaid Reading Ease. According to [this Wikipedia article](https://en.wikipedia.org/wiki/Reading_%28process%29#Reading_rate), rates of reading include reading for memorization (fewer than 100 words per minute [wpm]); reading for learning (100–200 wpm); reading for comprehension (200–400 wpm); and skimming (400–700 wpm). Reading for comprehension is the essence of the daily reading of most people. Skimming is for superficially processing large quantities of text at a low level of comprehension (below 50%).
@@ -119,7 +133,11 @@ Thanks to Andrew Welch ([@nystudio107](https://github.com/nystudio107)) for [poi
 {% filter humanAverageReadingTime %}
 	{{ entry.intro }}
 	{{ entry.body }}
-	{{ entry.matrixField }}
+	{% for block in entry.matrixField.all() %}
+		{{ block.myfield }}
+		{{ block.myfieldTwo }}
+		...
+	{% endfor %}
 	...
 {% endfilter %}
 ```
@@ -131,6 +149,9 @@ Some things to do, and ideas for potential features:
 * Release it
 * Clean up the code
 * Get feedback from others & make any necessary changes/improvements
+* Make some of these functions easier to access, possibly adding some sort of variable to wrap the entire entry?
 * Possibly add a widget inside of Craft's entry editor that scores your content ahead of time?
+
+Pull requests are welcome to add new features!
 
 Brought to you by [Mike Stecker](https://github.com/mikestecker)

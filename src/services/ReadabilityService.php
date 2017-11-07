@@ -257,6 +257,33 @@ class ReadabilityService extends Component
         $textStatistics = new TextStatistics();
         return $textStatistics->automated_readability_index($content);
     }
+
+
+    public function daleChallReadabilityScore($content)
+    {
+        if (empty($content)) {
+            return '';
+        }
+        $content = StringHelper::stripHtml($content);
+        
+        
+        $textStatistics = new TextStatistics();
+        return $textStatistics->daleChallReadabilityScore($content);
+    }
+
+
+    public function spacheReadabilityScore($content)
+    {
+        if (empty($content)) {
+            return '';
+        }
+        $content = StringHelper::stripHtml($content);
+        
+        
+        $textStatistics = new TextStatistics();
+        return $textStatistics->spacheReadabilityScore($content);
+    }
+
     
     public function wordCount($content): int
     {
