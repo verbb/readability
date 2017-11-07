@@ -5,6 +5,7 @@
 
 # COMPOSER
 /vendor
+*.lock
 
 # BUILD FILES
 /bower_components/*
