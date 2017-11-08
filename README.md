@@ -1,6 +1,6 @@
 # Readability plugin for Craft CMS 3.x
 
-The Readability plugin will help you to indentify issues with your website content, especially with readability.
+The Readability plugin will help you to identify issues with your website content, especially with readability.
 
 It allows you to measure the readability of text using common scoring systems, including:
 
