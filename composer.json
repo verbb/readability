@@ -2,7 +2,7 @@
     "name": "mikestecker/craft3-readability",
     "description": "Get statistics on your text.",
     "type": "craft-plugin",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "keywords": [
         "craft",
         "cms",
@@ -24,7 +24,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "craftcms/cms": "~3.0.0-beta.23",
+        "craftcms/cms": "^3.0.0-RC1",
         "davechild/textstatistics": "^1.0"
     },
     "repositories": [

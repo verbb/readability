@@ -52,7 +52,7 @@ class Readability extends Plugin
         parent::init();
         self::$plugin = $this;
 
-        Craft::$app->view->twig->addExtension(new ReadabilityTwigExtension());
+        Craft::$app->view->registerTwigExtension(new ReadabilityTwigExtension());
 
         Event::on(
             CraftVariable::class,

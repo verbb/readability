@@ -7,3 +7,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 ## 1.0.0 - 2017-11-06
 ### Added
 - Initial release
+
+## 1.0.1 - 2017-11-07
+### Changes
+- Updated `composer.json`
+
+## 1.0.2 - 2017-12-11
+### Changes
+- Updated to require `craftcms/cms ^3.0.0-RC1`
+- Switched to `Craft::$app->view->registerTwigExtension` to register the Twig extension
