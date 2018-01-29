@@ -1,8 +1,8 @@
 {
-    "name": "mikestecker/craft3-readability",
+    "name": "mikestecker/craft-readability",
     "description": "Get statistics on your text.",
     "type": "craft-plugin",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "keywords": [
         "craft",
         "cms",
@@ -11,8 +11,8 @@
         "readability"
     ],
     "support": {
-        "docs": "https://github.com/mikestecker/craft3-readability/blob/master/README.md",
-        "issues": "https://github.com/mikestecker/craft3-readability/issues"
+        "docs": "https://github.com/mikestecker/craft-readability/blob/master/README.md",
+        "issues": "https://github.com/mikestecker/craft-readability/issues"
     },
     "license": "MIT",
     "authors": [
@@ -44,7 +44,7 @@
         "schemaVersion": "1.0.0",
         "hasCpSettings": false,
         "hasCpSection": false,
-        "changelogUrl": "https://raw.githubusercontent.com/mikestecker/craft3-readability/master/CHANGELOG.md",
+        "changelogUrl": "https://raw.githubusercontent.com/mikestecker/craft-readability/master/CHANGELOG.md",
         "components": {
             "readability": "mikestecker\\readability\\services\\ReadabilityService"
         },
