@@ -6,7 +6,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## 1.0.4 - 2018-04-04
 ### Changed
-- Simply updated the base `raftcms/cms1` requirement from `^3.0.0-RC1` to `^3.0.0`.
+- Simply updated the base `craftcms/cms1` requirement from `^3.0.0-RC1` to `^3.0.0`.
 
 ## 1.0.3 - 2018-01-29
 ### Changed
