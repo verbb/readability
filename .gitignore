@@ -5,7 +5,6 @@
 
 # COMPOSER
 /vendor
-*.lock
 
 # BUILD FILES
 /bower_components/*
@@ -19,6 +18,7 @@
 .idea
 .project
 .settings
+.map
 *.esproj
 *.sublime-workspace
 *.sublime-project
@@ -29,5 +29,3 @@
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-config.codekit3
-prepros-6.config

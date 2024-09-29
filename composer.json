@@ -1,8 +1,8 @@
 {
-    "name": "mikestecker/craft-readability",
-    "description": "Get statistics on your text.",
+    "name": "verbb/readability",
+    "description": "A set of Twig filters for showing statistics on your text.",
     "type": "craft-plugin",
-    "version": "1.0.4",
+    "version": "2.0.0",
     "keywords": [
         "craft",
         "cms",
@@ -11,43 +11,38 @@
         "readability"
     ],
     "support": {
-        "docs": "https://github.com/mikestecker/craft-readability/blob/master/README.md",
-        "issues": "https://github.com/mikestecker/craft-readability/issues"
+        "email": "support@verbb.io",
+        "issues": "https://github.com/verbb/readability/issues?state=open",
+        "source": "https://github.com/verbb/readability",
+        "docs": "https://github.com/verbb/readability",
+        "rss": "https://github.com/verbb/readability/commits/v2.atom"
     },
     "license": "MIT",
     "authors": [
+        {
+            "name": "Verbb",
+            "homepage": "https://verbb.io"
+        },
         {
             "name": "Mike Stecker",
             "homepage": "https://github.com/mikestecker"
         }
     ],
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "require": {
-        "craftcms/cms": "^3.0.0",
-        "davechild/textstatistics": "^1.0"
+        "php": "^8.0.2",
+        "craftcms/cms": "^4.0.0",
+        "davechild/textstatistics": "^1.0",
+        "verbb/base": "^2.0.0"
     },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://asset-packagist.org"
-        }
-    ],
     "autoload": {
         "psr-4": {
-          "mikestecker\\readability\\": "src/"
+            "verbb\\readability\\": "src/"
         }
     },
     "extra": {
         "name": "Readability",
         "handle": "readability",
-        "schemaVersion": "1.0.0",
-        "hasCpSettings": false,
-        "hasCpSection": false,
-        "changelogUrl": "https://raw.githubusercontent.com/mikestecker/craft-readability/master/CHANGELOG.md",
-        "components": {
-            "readability": "mikestecker\\readability\\services\\ReadabilityService"
-        },
-        "class": "mikestecker\\readability\\Readability"
+        "changelogUrl": "https://raw.githubusercontent.com/verbb/readability/craft-4/CHANGELOG.md",
+        "class": "verbb\\readability\\Readability"
     }
 }
