@@ -4,7 +4,7 @@
 > {note} The plugin’s package name has changed to `verbb/readability`. Readability will need be updated to 2.0 from a terminal, by running `composer require verbb/readability && composer remove mikestecker/craft-readability`.
 
 ### Changed
-- Migration to `verbb/color-mixer`.
+- Migration to `verbb/readability`.
 - Now requires Craft 4.0+.
 
 ## 1.0.4 - 2018-04-04
