@@ -6,37 +6,35 @@ use verbb\readability\services\Service;
 
 use Craft;
 
-use yii\log\Logger;
-
-use verbb\base\BaseHelper;
+use verbb\base\LogTrait;
+use verbb\base\helpers\Plugin;
 
 trait PluginTrait
 {
     // Static Properties
     // =========================================================================
 
-    public static Readability $plugin;
+    public static ?Readability $plugin = null;
 
 
-    // Public Methods
+    // Traits
     // =========================================================================
 
-    public static function log(string $message, array $attributes = []): void
+    use LogTrait;
+
+
+    // Static Methods
+    // =========================================================================
+
+    public static function config(): array
     {
-        if ($attributes) {
-            $message = Craft::t('readability', $message, $attributes);
-        }
+        Plugin::bootstrapPlugin('readability');
 
-        Craft::getLogger()->log($message, Logger::LEVEL_INFO, 'readability');
-    }
-
-    public static function error(string $message, array $attributes = []): void
-    {
-        if ($attributes) {
-            $message = Craft::t('readability', $message, $attributes);
-        }
-
-        Craft::getLogger()->log($message, Logger::LEVEL_ERROR, 'readability');
+        return [
+            'components' => [
+                'service' => Service::class,
+            ],
+        ];
     }
 
 
@@ -46,24 +44,6 @@ trait PluginTrait
     public function getService(): Service
     {
         return $this->get('service');
-    }
-
-
-    // Private Methods
-    // =========================================================================
-
-    private function _setPluginComponents(): void
-    {
-        $this->setComponents([
-            'service' => Service::class,
-        ]);
-
-        BaseHelper::registerModule();
-    }
-
-    private function _setLogging(): void
-    {
-        BaseHelper::setFileLogging('readability');
     }
 
 }
