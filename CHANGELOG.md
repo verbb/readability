@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.1 - 2025-07-18
+
+### Changed
+- Update English translations.
+
 ## 2.0.0 - 2024-09-29
 > {note} The plugin’s package name has changed to `verbb/readability`. Readability will need be updated to 2.0 from a terminal, by running `composer require verbb/readability && composer remove mikestecker/craft-readability`.
 
