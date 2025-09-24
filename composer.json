@@ -2,7 +2,7 @@
     "name": "verbb/readability",
     "description": "A set of Twig filters for showing statistics on your text.",
     "type": "craft-plugin",
-    "version": "3.0.1",
+    "version": "4.0.0-alpha.1",
     "keywords": [
         "craft",
         "cms",
@@ -29,10 +29,10 @@
         }
     ],
     "require": {
-        "php": "^8.2",
-        "craftcms/cms": "^5.0.0",
+        "php": "^8.4",
+        "craftcms/cms": "6.x-dev",
         "davechild/textstatistics": "^1.0",
-        "verbb/base": "^3.0.0"
+        "verbb/base": "dev-craft-6"
     },
     "autoload": {
         "psr-4": {
@@ -42,7 +42,9 @@
     "extra": {
         "name": "Readability",
         "handle": "readability",
-        "changelogUrl": "https://raw.githubusercontent.com/verbb/readability/craft-5/CHANGELOG.md",
+        "changelogUrl": "https://raw.githubusercontent.com/verbb/readability/craft-6/CHANGELOG.md",
         "class": "verbb\\readability\\Readability"
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
