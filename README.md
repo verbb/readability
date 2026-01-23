@@ -1,4 +1,4 @@
-<p align="center"><img src="https://verbb.imgix.net/plugins/readability/readability-icon.svg" width="100" height="100" alt="Readability icon"></p>
+<p align="center"><img src="https://assets.verbb.io/plugins/readability/readability-icon.svg" width="100" height="100" alt="Readability icon"></p>
 <h1 align="center">Readability for Craft CMS</h1>
 
 Readability is a Craft CMS plugin for finding readability issues with your content. Use filters and functions to measure the readability of text using common scoring systems. Based off the [Text Statistics](https://github.com/DaveChild/Text-Statistics) library.
