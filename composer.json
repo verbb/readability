@@ -31,7 +31,7 @@
     "require": {
         "php": "^8.2",
         "craftcms/cms": "^5.0.0",
-        "davechild/textstatistics": "^1.0",
+        "davechild/textstatistics": "^1.0.3",
         "verbb/base": "^3.0.0"
     },
     "autoload": {
