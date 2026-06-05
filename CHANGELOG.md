@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.0.2 - 2026-06-05
+
+### Fixed
+- Fix `textstatistics` dependency to avoid deprecated `create_function()` usage.
+
 ## 3.0.1 - 2025-07-18
 
 ### Changed
