@@ -1,17 +1,31 @@
 # Usage
-Readability provide a number of Twig filters to use, for a variety of different use-cases.
+Readability estimates how difficult a passage may be to read using measures such as sentence length and word length. Use it to compare drafts, alongside reading the text yourself; a score cannot tell you whether an explanation is accurate or answers the reader's question.
+
+For example, put this in a development Twig template to inspect a short passage:
+
+```twig
+{% set someContent = 'Visit the studio on Saturday. Bring a notebook. We will provide the tools you need for the workshop.' %}
+
+<p>Reading ease: {{ someContent | readingEase }}</p>
+<p>{{ someContent | readingEaseDescription }}</p>
+```
+
+Replace the passage with your own text and compare the result after revising a long sentence. The examples below use the same `someContent` variable. Very short samples can produce unstable scores, so assess a representative passage rather than treating a single sentence as a verdict.
 
 ## Measuring Readability
 
 ### Flesch Kincaid Reading Ease
-This is one of the oldest readability scores, commonly used in academics and government and incorporated into most word processing software. The Flesch-Kincaid Reading Ease score is the result of a mathematical formula that incorporates the average number of syllables per word and the average number of words per sentence for a 100-word block of text. Results are measured on a scale of 1-100.
+This is one of the oldest readability scores, commonly used in academics and government and incorporated into most word processing software. The Flesch-Kincaid Reading Ease score is the result of a mathematical formula that incorporates the average number of syllables per word and the average number of words per sentence for a 100-word block of text. Higher reading-ease scores generally indicate easier text. The formula is not a guarantee that every input produces a value within 1–100.
 
 ```twig
 {{ someContent | readingEase }}
 ```
 
-### Flesch-Kincaid Grade Level
-Like the Flesch-Kincaid Reading Ease score, this is a mathematical formula that measures syllables and sentence length. However, the results are given as an academic grade level, from 0-12. Negative results are rated at 0, and any grade level over 12 is listed as 12. The Flesch-Kincaid Grade Level score was developed after the Reading Ease score to make it easier for parents, librarians and others to make decisions about reading content for children.
+<span id="flesch-kincaid-grade-level"></span>
+
+### School Level
+
+`schoolLevel` returns a descriptive school-level label derived from the reading-ease score, such as “8th & 9th grade”. It is a guide to interpreting that score, not a separate numeric grade calculation.
 
 ```twig
 {{ someContent | schoolLevel }}
@@ -19,21 +33,21 @@ Like the Flesch-Kincaid Reading Ease score, this is a mathematical formula that 
 
 ### Gunning Fog Index
 
-The Gunning Fog Index takes into account “complex” words, those with three or more syllables, as part of its mathematical formula for readability. It also omits proper nouns, jargon and compound words. The result? A grade-level score from 1-unlimited.
+The Gunning Fog Index takes into account “complex” words, those with three or more syllables, as part of its mathematical formula for readability. It also omits proper nouns, jargon and compound words. The result is a grade-level estimate.
 
 ```twig
 {{ someContent | gunningFogScore }}
 ```
 
 ### Coleman Liau Index
-Unlike most other readability tests, the Coleman Liau Index relies on number of characters instead of syllables per word for its calculation. It returns a U.S. grade-level score from 1-12.
+Unlike most other readability tests, the Coleman Liau Index relies on number of characters instead of syllables per word for its calculation. It returns a U.S. grade-level estimate.
 
 ```twig
 {{ someContent | colemanLiauIndex }}
 ```
 
 ### SMOG Index
-It’s [debatable](http://www.readabilityformulas.com/smog-readability-formula.php) whether SMOG is short for “Simple Measure of Gobbledygook,” but this index developed in 1969 is still a common measure of readability. Take 30 sentences (10 from the beginning, middle and end of your text), then count every word with three or more syllables in each group of sentences, then calculate the square root of that number and round it to the nearest 10, then add 3 to that number. Voila! You have the U.S. grade level that should be able to read that text. (And that’s one of the simpler of these readability formulas.)
+SMOG estimates reading level using words with three or more syllables. Use a sufficiently long passage and compare it with the other measures rather than treating its result as a precise description of every reader.
 
 ```twig
 {{ someContent | smogIndex }}
