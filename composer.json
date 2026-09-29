@@ -1,6 +1,6 @@
 {
     "name": "verbb/readability",
-    "description": "A set of Twig filters for showing statistics on your text.",
+    "description": "A Craft CMS plugin with Twig filters for reading time, text counts and readability scores.",
     "type": "craft-plugin",
     "version": "3.0.3",
     "keywords": [
