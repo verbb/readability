@@ -1,12 +1,17 @@
 <p align="center"><img src="https://assets.verbb.io/plugins/readability/readability-icon.svg" width="100" height="100" alt="Readability icon"></p>
 <h1 align="center">Readability for Craft CMS</h1>
 
-Readability is a Craft CMS plugin for finding readability issues with your content. Use filters and functions to measure the readability of text using common scoring systems. Based off the [Text Statistics](https://github.com/DaveChild/Text-Statistics) library.
+Readability is a Craft CMS plugin that gives Twig practical measures for the text a site publishes. Estimate reading time, count the building blocks, and apply established readability scores without sending content to another service.
+
+Calculate an estimated reading duration and display it beside an article, guide, or lesson. Character, word, sentence, and syllable counts can support editorial displays or project-specific rules.
 
 ## Features
-- Measure readability with [common](https://raventools.com/blog/ultimate-list-of-online-content-readability-tests/) scoring systems.
-- Reading time durations.
-- Character/word/syllable counts.
+
+- Estimate how long a passage is likely to take to read.
+- Measure characters when length constraints or summaries need them.
+- Count the words in rendered or stored text.
+- Use syllable estimates as an input to readability analysis.
+- Analyse content inside the application instead of sending it to an external API.
 
 ## Documentation
 Visit the [Readability Plugin page](https://verbb.io/craft-plugins/readability) for all documentation, guides, pricing and developer resources.
@@ -18,7 +23,7 @@ Originally created by [Mike Stecker](https://github.com/mikestecker).
 Get in touch with us via the [Readability Support page](https://verbb.io/craft-plugins/readability/support) or by [creating a Github issue](https://github.com/verbb/readability/issues)
 
 ## Sponsor
-Readability is licensed under the MIT license, meaning it will always be free and open source – we love free stuff! If you'd like to show your support to the plugin regardless, [Sponsor](https://github.com/sponsors/verbb) development.
+Readability is licensed under the MIT license, meaning it will always be free and open source - we love free stuff! If you'd like to show your support to the plugin regardless, [Sponsor](https://github.com/sponsors/verbb) development.
 
 <h2></h2>
 

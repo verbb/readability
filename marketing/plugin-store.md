@@ -4,10 +4,8 @@ Calculate an estimated reading duration and display it beside an article, guide,
 
 ## Features
 
-- **Reading time:** Estimate how long a passage is likely to take to read.
-- **Character counts:** Measure characters when length constraints or summaries need them.
-- **Word counts:** Count the words in rendered or stored text.
-- **Syllable counts:** Use syllable estimates as an input to readability analysis.
-- **Readability scores:** Apply established formulas without maintaining the calculations in templates.
-- **Local processing:** Analyse content inside the application instead of sending it to an external API.
-- **Readability scores:** Run common readability formulas from Twig when a score helps authors, reviewers, or readers understand the complexity of a passage. The source content stays within the Craft request.
+- Estimate how long a passage is likely to take to read.
+- Measure characters when length constraints or summaries need them.
+- Count the words in rendered or stored text.
+- Use syllable estimates as an input to readability analysis.
+- Analyse content inside the application instead of sending it to an external API.
