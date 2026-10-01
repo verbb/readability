@@ -23,7 +23,7 @@ class Service extends Component
 
         return (new TextStatistics())->fleschKincaidReadingEase($content);
     }
-    
+
     public function readingEaseDescription(string $content): string
     {
         if (empty($content)) {
@@ -37,23 +37,23 @@ class Service extends Component
 
         if ($readingEase < 20) {
             $description = 'Very difficult to read. Best understood by university graduates';
-        } else if ($readingEase < 50) {
+        } elseif ($readingEase < 50) {
             $description = 'Difficult to read.';
-        } else if ($readingEase < 60) {
+        } elseif ($readingEase < 60) {
             $description = 'Fairly difficult to read.';
-        } else if ($readingEase < 70) {
+        } elseif ($readingEase < 70) {
             $description = 'Plain English. Easily understood by 13- to 15-year-old students.';
-        } else if ($readingEase < 80) {
+        } elseif ($readingEase < 80) {
             $description = 'Fairly easy to read.';
-        } else if ($readingEase < 90) {
+        } elseif ($readingEase < 90) {
             $description = 'Easy to read. Conversational English for consumers.';
-        } else if ($readingEase > 90) {
+        } elseif ($readingEase > 90) {
             $description = 'Very easy to read. Easily understood by an average 11-year-old student.';
         }
 
         return $description;
     }
-    
+
     public function schoolLevel(string $content): string
     {
         if (empty($content)) {
@@ -61,23 +61,23 @@ class Service extends Component
         }
 
         $content = StringHelper::stripHtml($content);
-        
+
         $description = '';
         $readingEase = $this->readingEase($content);
 
         if ($readingEase < 20) {
             $description = 'College graduate';
-        } else if ($readingEase < 50) {
+        } elseif ($readingEase < 50) {
             $description = 'College';
-        } else if ($readingEase < 60) {
+        } elseif ($readingEase < 60) {
             $description = '10th to 12th grade';
-        } else if ($readingEase < 70) {
+        } elseif ($readingEase < 70) {
             $description = '8th & 9th grade';
-        } else if ($readingEase < 80) {
+        } elseif ($readingEase < 80) {
             $description = '7th grade';
-        } else if ($readingEase < 90) {
+        } elseif ($readingEase < 90) {
             $description = '6th grade';
-        } else if ($readingEase > 90) {
+        } elseif ($readingEase > 90) {
             $description = '5th grade';
         }
 
@@ -89,7 +89,7 @@ class Service extends Component
         if (empty($content)) {
             return '';
         }
-        
+
         return Text::cleanText($content);
     }
 
@@ -100,7 +100,7 @@ class Service extends Component
         }
 
         $content = StringHelper::stripHtml($content);
-        
+
         return Text::characterCount($content);
     }
 
@@ -233,7 +233,7 @@ class Service extends Component
         $content = StringHelper::stripHtml($content);
         return (new TextStatistics())->spacheReadabilityScore($content);
     }
-    
+
     public function wordCount(string $content): int
     {
         if (empty($content)) {
@@ -241,7 +241,7 @@ class Service extends Component
         }
 
         $content = StringHelper::stripHtml($content);
-        
+
         return Text::wordCount($content);
     }
 
@@ -255,24 +255,24 @@ class Service extends Component
 
         // https://en.wikipedia.org/wiki/Reading_%28process%29#Reading_rate
         // Rates of reading include reading for memorization (fewer than 100 words per minute [wpm]); reading for learning (100–200 wpm); reading for comprehension (200–400 wpm); and skimming (400–700 wpm). Reading for comprehension is the essence of the daily reading of most people. Skimming is for superficially processing large quantities of text at a low level of comprehension (below 50%).
-         
+
         $readingRate = 0; // words per minute
         $readingEase = $this->readingEase($content);
         $wordCount = $this->wordCount($content);
 
         if ($readingEase < 20) {
-           $readingRate = 100;
-        } else if ($readingEase < 50) {
+            $readingRate = 100;
+        } elseif ($readingEase < 50) {
             $readingRate = 200;
-        } else if ($readingEase < 60) {
+        } elseif ($readingEase < 60) {
             $readingRate = 300;
-        } else if ($readingEase < 70) {
-           $readingRate = 350;
-        } else if ($readingEase < 80) {
+        } elseif ($readingEase < 70) {
+            $readingRate = 350;
+        } elseif ($readingEase < 80) {
             $readingRate = 400;
-        } else if ($readingEase < 90) {
+        } elseif ($readingEase < 90) {
             $readingRate = 500;
-        } else if ($readingEase > 90) {
+        } elseif ($readingEase > 90) {
             $readingRate = 600;
         }
 
@@ -301,7 +301,7 @@ class Service extends Component
 
         $content = StringHelper::stripHtml($content);
 
-        // http://www.healthguidance.org/entry/13263/1/What-Is-the-Average-Reading-Speed-and-the-Best-Rate-of-Reading.html         
+        // http://www.healthguidance.org/entry/13263/1/What-Is-the-Average-Reading-Speed-and-the-Best-Rate-of-Reading.html
         $readingRate = 250; // words per minute
         $wordCount = $this->wordCount($content);
 

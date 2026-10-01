@@ -87,7 +87,7 @@ class Extension extends AbstractExtension
     {
         return Template::raw(Readability::$plugin->getService()->readingEaseDescription($content));
     }
-    
+
     public function schoolLevel(string $content): Markup
     {
         return Template::raw(Readability::$plugin->getService()->schoolLevel($content));
@@ -97,12 +97,12 @@ class Extension extends AbstractExtension
     {
         return Template::raw(Readability::$plugin->getService()->cleanText($content));
     }
-    
+
     public function characterCount(string $content): int
     {
         return Readability::$plugin->getService()->characterCount($content);
     }
-    
+
     public function letterCount(string $content): int
     {
         return Readability::$plugin->getService()->letterCount($content);
@@ -117,12 +117,12 @@ class Extension extends AbstractExtension
     {
         return Readability::$plugin->getService()->averageSyllablesPerWord($content);
     }
-    
+
     public function percentageWordsWithThreeSyllables(string $content): float
     {
         return Readability::$plugin->getService()->percentageWordsWithThreeSyllables($content);
     }
-    
+
     public function sentenceCount(string $content): int
     {
         return Readability::$plugin->getService()->sentenceCount($content);
