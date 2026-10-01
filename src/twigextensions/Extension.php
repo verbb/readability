@@ -93,9 +93,9 @@ class Extension extends AbstractExtension
         return Template::raw(Readability::$plugin->getService()->schoolLevel($content));
     }
 
-    public function cleanText(string $content): Markup
+    public function cleanText(string $content): string
     {
-        return Template::raw(Readability::$plugin->getService()->cleanText($content));
+        return Readability::$plugin->getService()->cleanText($content);
     }
 
     public function characterCount(string $content): int
