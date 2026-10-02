@@ -2,7 +2,7 @@
 namespace verbb\readability;
 
 use verbb\readability\base\PluginTrait;
-use verbb\readability\twigextensions\Extension;
+use verbb\readability\web\twig\Extension;
 
 use Craft;
 use craft\base\Plugin;

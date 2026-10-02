@@ -1,5 +1,5 @@
 <?php
-namespace verbb\readability\twigextensions;
+namespace verbb\readability\web\twig;
 
 use verbb\readability\Readability;
 
