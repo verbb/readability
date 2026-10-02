@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 3.0.4 - 2026-10-02
 
 ### Fixed
 - Fixed a low-severity cross-site scripting vulnerability.
