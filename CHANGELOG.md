@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+### Fixed
+- Fixed a low-severity denial-of-service vulnerability.
+
 ## 3.0.4 - 2026-10-02
 
 ### Fixed

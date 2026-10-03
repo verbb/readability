@@ -45,9 +45,9 @@ class Service extends Component
             $description = 'Plain English. Easily understood by 13- to 15-year-old students.';
         } elseif ($readingEase < 80) {
             $description = 'Fairly easy to read.';
-        } elseif ($readingEase < 90) {
+        } elseif ($readingEase <= 90) {
             $description = 'Easy to read. Conversational English for consumers.';
-        } elseif ($readingEase > 90) {
+        } else {
             $description = 'Very easy to read. Easily understood by an average 11-year-old student.';
         }
 
@@ -75,9 +75,9 @@ class Service extends Component
             $description = '8th & 9th grade';
         } elseif ($readingEase < 80) {
             $description = '7th grade';
-        } elseif ($readingEase < 90) {
+        } elseif ($readingEase <= 90) {
             $description = '6th grade';
-        } elseif ($readingEase > 90) {
+        } else {
             $description = '5th grade';
         }
 
@@ -270,9 +270,9 @@ class Service extends Component
             $readingRate = 350;
         } elseif ($readingEase < 80) {
             $readingRate = 400;
-        } elseif ($readingEase < 90) {
+        } elseif ($readingEase <= 90) {
             $readingRate = 500;
-        } elseif ($readingEase > 90) {
+        } else {
             $readingRate = 600;
         }
 
