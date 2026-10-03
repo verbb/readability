@@ -4,6 +4,7 @@
 
 ### Fixed
 - Fixed a low-severity denial-of-service vulnerability.
+- Fixed numeric readability filters throwing errors for empty content.
 
 ## 3.0.4 - 2026-10-02
 

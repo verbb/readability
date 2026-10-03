@@ -16,7 +16,7 @@ class Service extends Component
     public function readingEase(string $content): float
     {
         if (empty($content)) {
-            return '';
+            return 0.0;
         }
 
         $content = StringHelper::stripHtml($content);
@@ -96,7 +96,7 @@ class Service extends Component
     public function characterCount(string $content): int
     {
         if (empty($content)) {
-            return '';
+            return 0;
         }
 
         $content = StringHelper::stripHtml($content);
@@ -107,7 +107,7 @@ class Service extends Component
     public function letterCount(string $content): int
     {
         if (empty($content)) {
-            return '';
+            return 0;
         }
 
         $content = StringHelper::stripHtml($content);
@@ -117,7 +117,7 @@ class Service extends Component
     public function syllableCount(string $word): int
     {
         if (empty($word)) {
-            return '';
+            return 0;
         }
 
         $content = StringHelper::stripHtml($word);
@@ -127,7 +127,7 @@ class Service extends Component
     public function averageSyllablesPerWord(string $content): float
     {
         if (empty($content)) {
-            return '';
+            return 0.0;
         }
 
         $content = StringHelper::stripHtml($content);
@@ -137,7 +137,7 @@ class Service extends Component
     public function percentageWordsWithThreeSyllables(string $content): float
     {
         if (empty($content)) {
-            return '';
+            return 0.0;
         }
 
         $content = StringHelper::stripHtml($content);
@@ -147,7 +147,7 @@ class Service extends Component
     public function sentenceCount(string $content): int
     {
         if (empty($content)) {
-            return '';
+            return 0;
         }
 
         $content = StringHelper::stripHtml($content);
@@ -157,7 +157,7 @@ class Service extends Component
     public function averageWordsPerSentence(string $content): float
     {
         if (empty($content)) {
-            return '';
+            return 0.0;
         }
 
         $content = StringHelper::stripHtml($content);
@@ -167,7 +167,7 @@ class Service extends Component
     public function gradeLevel(string $content): float
     {
         if (empty($content)) {
-            return '';
+            return 0.0;
         }
 
         $content = StringHelper::stripHtml($content);
@@ -177,7 +177,7 @@ class Service extends Component
     public function gunningFogScore(string $content): float
     {
         if (empty($content)) {
-            return '';
+            return 0.0;
         }
 
         $content = StringHelper::stripHtml($content);
@@ -187,7 +187,7 @@ class Service extends Component
     public function colemanLiauIndex(string $content): float
     {
         if (empty($content)) {
-            return '';
+            return 0.0;
         }
 
         $content = StringHelper::stripHtml($content);
@@ -197,7 +197,7 @@ class Service extends Component
     public function smogIndex(string $content): float
     {
         if (empty($content)) {
-            return '';
+            return 0.0;
         }
 
         $content = StringHelper::stripHtml($content);
@@ -207,7 +207,7 @@ class Service extends Component
     public function automatedReadabilityIndex(string $content): float
     {
         if (empty($content)) {
-            return '';
+            return 0.0;
         }
 
         $content = StringHelper::stripHtml($content);
@@ -237,7 +237,7 @@ class Service extends Component
     public function wordCount(string $content): int
     {
         if (empty($content)) {
-            return '';
+            return 0;
         }
 
         $content = StringHelper::stripHtml($content);
@@ -248,7 +248,7 @@ class Service extends Component
     public function readingTime(string $content): int
     {
         if (empty($content)) {
-            return '';
+            return 0;
         }
 
         $content = StringHelper::stripHtml($content);
@@ -296,7 +296,7 @@ class Service extends Component
     public function averageReadingTime(string $content): int
     {
         if (empty($content)) {
-            return '';
+            return 0;
         }
 
         $content = StringHelper::stripHtml($content);
