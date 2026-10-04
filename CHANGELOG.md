@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 3.0.5 - 2026-10-05
 
 ### Fixed
 - Fixed a low-severity denial-of-service vulnerability.
