@@ -7,5 +7,5 @@ Calculate an estimated reading duration and display it beside an article, guide,
 - Estimate how long a passage is likely to take to read.
 - Measure characters when length constraints or summaries need them.
 - Count the words in rendered or stored text.
-- Use syllable estimates as an input to readability analysis.
+- Calculate established readability scores, including Flesch-Kincaid Reading Ease, Gunning Fog, SMOG, Coleman-Liau, Dale-Chall and the Automated Readability Index.
 - Analyse content inside the application instead of sending it to an external API.

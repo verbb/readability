@@ -10,20 +10,24 @@ Calculate an estimated reading duration and display it beside an article, guide,
 - Estimate how long a passage is likely to take to read.
 - Measure characters when length constraints or summaries need them.
 - Count the words in rendered or stored text.
-- Use syllable estimates as an input to readability analysis.
+- Calculate established readability scores, including Flesch-Kincaid Reading Ease, Gunning Fog, SMOG, Coleman-Liau, Dale-Chall and the Automated Readability Index.
 - Analyse content inside the application instead of sending it to an external API.
 
 ## Documentation
+
 Visit the [Readability Plugin page](https://verbb.io/craft-plugins/readability) for all documentation, guides, pricing and developer resources.
 
 ## Credit & Thanks
+
 Originally created by [Mike Stecker](https://github.com/mikestecker).
 
 ## Support
-Get in touch with us via the [Readability Support page](https://verbb.io/craft-plugins/readability/support) or by [creating a Github issue](https://github.com/verbb/readability/issues)
+
+Get in touch with us via the [Readability Support page](https://verbb.io/craft-plugins/readability/support) or by [creating a GitHub issue](https://github.com/verbb/readability/issues).
 
 ## Sponsor
-Readability is licensed under the MIT license, meaning it will always be free and open source - we love free stuff! If you'd like to show your support to the plugin regardless, [Sponsor](https://github.com/sponsors/verbb) development.
+
+Readability is licensed under the MIT license, so it will always be free and open source. If you'd like to support it anyway, you can [sponsor its development](https://github.com/sponsors/verbb).
 
 <h2></h2>
 
